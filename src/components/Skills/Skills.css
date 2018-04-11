@@ -1,0 +1,25 @@
+.skills {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills .section {
+  flex-basis: 33.33%;
+}
+
+.skills .section:last-child {
+  margin-right: auto;
+}
+
+.skills .section h3 {
+  font-size: 17px;
+  margin: 10px 0 0 0;
+}
+
+.skills .section p {
+  margin: 13px 0px;
+}

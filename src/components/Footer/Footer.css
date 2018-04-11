@@ -1,0 +1,32 @@
+.footer {
+  max-width: 750px;
+  width: 100%;
+  margin: 50px auto 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.footer div, .footer .text {
+  flex-basis: 50%;
+}
+
+.footer .text {
+  font-size: 16px;
+}
+
+.footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer .social a {
+  color: #3399ff;
+  font-size: 22px;
+  padding: 0px 7px;
+  transition: color 0.5s ease;
+}
+
+.footer .social a:hover {
+  color: #a0cfff;
+}

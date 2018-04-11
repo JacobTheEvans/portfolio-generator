@@ -1,0 +1,24 @@
+.profile {
+  max-width: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.profile .img {
+  height: 235px;
+  width: 40%;
+  padding: 10px;
+  background-position: top;
+  background-size: cover;
+}
+
+.profile p {
+  width: 55%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  margin: 0;
+}

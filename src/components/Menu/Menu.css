@@ -1,0 +1,12 @@
+.lang-menu {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  z-index: 2;
+  display: flex;
+  color: white;
+}
+
+.lang-menu div {
+  padding: 4px 4px;
+}

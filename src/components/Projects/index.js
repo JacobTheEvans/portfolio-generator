@@ -1,11 +1,11 @@
 import React from 'react'
-import './Repos.css'
+import './Projects.css'
 
-function Repos ({ repos }) {
+function Projects ({ projects }) {
   return (
-    <div className='repos'>
+    <div className='projects'>
       {
-        repos.map(({ name, description, url }) => (
+        projects.map(({ name, description, url }) => (
           <div key={name} className='card'>
             <a href={url} target='_blank'>{name}</a>
             <p>{description}</p>
@@ -16,4 +16,4 @@ function Repos ({ repos }) {
   )
 }
 
-export default Repos
+export default Projects

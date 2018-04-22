@@ -1,29 +1,52 @@
 import React from 'react'
+import styled from 'styled-components'
 import { toCapitalize } from '../../utils'
-import './Skills.css'
+
+const SkillsSection = styled.div`
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+
+const SectionDiv = styled.div`
+  flex-basis: 33.33%;
+  &:last-child  {
+    margin-right: auto;
+  }
+`
+
+const Header = styled.h3`
+  font-size: 17px;
+  margin: 10px 0 0 0;
+`
+
+const Skill = styled.p`
+  margin: 13px 0px;
+`
 
 function Skills ({ skills }) {
   return (
-    <div className='skills'>
-      {
-        Object.keys(skills).map(key => <Section key={key} header={key} items={skills[key]} />)
-      }
-    </div>
+    <SkillsSection>
+      {Object.keys(skills).map(key => <Section key={key} header={key} items={skills[key]} />)}
+    </SkillsSection>
   )
 }
 
 function Section ({ header, items }) {
   return (
-    <div className='section'>
-      <h3>{toCapitalize(header)}</h3>
+    <SectionDiv>
+      <Header>{toCapitalize(header)}</Header>
       {
         items.map((item, i) => (
-          <p key={item + i}>
+          <Skill key={item + i}>
             {item}
-          </p>
+          </Skill>
         ))
       }
-    </div>
+    </SectionDiv>
   )
 }
 

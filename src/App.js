@@ -7,14 +7,15 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
-import data from './config'
+import { templates } from './config'
+import { ThemeProvider } from './theme'
 
 class App extends Component {
   constructor () {
     super()
-    if (Array.isArray(data)) {
+    if (templates.length > 1) {
       this.state = {
-        options: data.map(({ language }) => language),
+        options: templates.map(({ language }) => language),
         index: 0
       }
     } else {
@@ -27,17 +28,39 @@ class App extends Component {
     this.setState({ index })
   }
 
+  addForkLink (index) {
+    let social
+    if (templates.length > 1) {
+      social = templates[index].footer.social
+    } else {
+      social = templates[0].footer.social
+    }
+    if (social) {
+      let isAdded = false
+      for (let { icon } of social) {
+        if (icon === 'code-fork') isAdded = true
+      }
+      if (!isAdded) {
+        social.unshift({
+          link: 'https://github.com/JacobTheEvans/portfolio-generator',
+          icon: 'code-fork'
+        })
+      }
+    }
+  }
+
   render () {
     const { options, index } = this.state
-    if (Array.isArray(data)) {
+    this.addForkLink(index)
+    if (templates.length > 1) {
       return (
         <Fragment>
-          <Template data={data[index]} />
+          <Template data={templates[index]} />
           <Menu handleSelect={this.handleSelect} options={options} />
         </Fragment>
       )
     } else {
-      return <Template data={data} />
+      return <Template data={templates[0]} />
     }
   }
 }
@@ -45,7 +68,7 @@ class App extends Component {
 function Template ({ data }) {
   const { headerOverrides = {} } = data
   return (
-    <div>
+    <ThemeProvider>
       {data.header && <Header brand={data.header.brand} slogan={data.header.slogan} />}
       {data.about && (
         <Fragment>
@@ -72,7 +95,7 @@ function Template ({ data }) {
         </Fragment>
       )}
       {data.footer && <Footer social={data.footer.social} year={data.footer.year} />}
-    </div>
+    </ThemeProvider>
   )
 }
 

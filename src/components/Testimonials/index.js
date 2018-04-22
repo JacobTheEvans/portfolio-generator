@@ -1,6 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
 import Slider from 'react-slick'
-import './Testimonials.css'
 
 const settings = {
   infinite: true,
@@ -12,20 +12,36 @@ const settings = {
   autoplaySpeed: 8000
 }
 
+const TestimonialsSection = styled.div`
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+`
+
+const Text = styled.p`
+  text-align: justify;
+  line-height: 30px;
+  font-size: 18px;
+`
+
+const Title = styled.span`
+  font-style: italic;
+`
+
 function Testimonials ({ testimonials }) {
   return (
-    <div className='testimonials'>
+    <TestimonialsSection>
       <Slider {...settings}>
         {
           testimonials.map(({ text, author, authorTitle }) => (
             <div key={text + author}>
-              <p className='text'>{text}</p>
-              <p>- <span className='author'>{author}</span> <span className='title'>{authorTitle}</span></p>
+              <Text>{text}</Text>
+              <p>- <span className='author'>{author}</span> <Title>{authorTitle}</Title></p>
             </div>
           ))
         }
       </Slider>
-    </div>
+    </TestimonialsSection>
   )
 }
 

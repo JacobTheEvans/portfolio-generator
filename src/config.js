@@ -1,4 +1,12 @@
-export default [
+// mainColor: '#3399ff',
+// secondaryColor: '#a0cfff',
+
+export const theme = {
+  main: 'purple',
+  secondary: 'red'
+}
+
+export const templates = [
   {
     language: 'EN',
     header: {
@@ -7,7 +15,7 @@ export default [
     },
     about: {
       img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
-      description: `I am Jacob Evans. I have a passion for programming and an overwhelming zeal when it comes to learning. I am an avid Linux user, a supporter of open source software, and an advocate of using technology to improve the world. I currently work at Cybus GmbH as a NodeJS Developer.`
+      description: `I am Jacob Evans. I have a passion for programming and an overwhelming zeal when it comes to learning. I am an avid Linux user, a supporter of open source software, and an advocate of using technology to improve the world. I currently work at Cybus GmbH as a NodeJS IoT Developer.`
     },
     projects: [
       {
@@ -86,7 +94,7 @@ export default [
     },
     about: {
       img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
-      description: `Ich heiß Jacob Evans. Ich liebe es zu programmieren und lernen gern. Ich bin ein begeisterter Linux-Benutzer, und a unterstütze Open-Source-Software, und Verfechter der Verwendung von Technologie zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS Entwickler.`
+      description: `Ich heiß Jacob Evans. Ich liebe es zu programmieren und lernen gern. Ich bin ein begeisterter Linux-Benutzer, und a unterstütze Open-Source-Software, und Verfechter der Verwendung von Technologie zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS IoT Entwickler.`
     },
     projects: [
       {

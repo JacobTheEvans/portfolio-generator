@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
-import { mobileParticles } from '../utils'
 import { ThemeContext } from '../theme'
 
 const HeaderSection = styled.div`
@@ -68,8 +67,8 @@ class ResponsiveParticles extends Component {
   constructor () {
     super()
     this.state = {
-      resize: false,
-      shouldRender: false
+      shouldRender: false,
+      width: 0
     }
     this.handleResize = this.handleResize.bind(this)
   }
@@ -80,40 +79,20 @@ class ResponsiveParticles extends Component {
     setTimeout(() => this.setState({ shouldRender: true }), 200)
   }
 
-  handleResize () {
-    const width = this.getWidth()
-    const { resize } = this.state
-    if (resize && width >= 850) {
-      this.setState({
-        resize: false
-      })
-    }
-    if (!resize && width < 850) {
-      this.setState({
-        resize: true
-      })
-    }
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.handleResize)
   }
 
-  getWidth () {
-    return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  handleResize () {
+    this.setState({
+      width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    })
   }
 
   render () {
-    const { resize, shouldRender } = this.state
-    if (!shouldRender) {
-      return false
-    } else if (resize) {
-      return (
-        <div>
-          <Particles params={mobileParticles} {...defaultParticlesProps} />
-        </div>
-      )
-    } else {
-      return (
-        <Particles {...defaultParticlesProps} />
-      )
-    }
+    const { shouldRender, width } = this.state
+    if (!shouldRender || width < 800) return false
+    else return <Particles {...defaultParticlesProps} />
   }
 }
 

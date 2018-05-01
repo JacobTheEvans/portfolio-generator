@@ -14,7 +14,11 @@ function main () {
   const config = `${result('theme', theme)}\n\n${result('templates', templates)}`
   writeFile('./src/config.js', config, err => {
     if (err) console.log(err)
-    else console.log('Config generated\nRun "npm publish" to push to github')
+    else {
+      console.log('Config generated')
+      console.log('Update your package.json "homepage" to match http://<gitname>.github.io/portfolio-generator')
+      console.log('Then run "npm deploy" to push to github')
+    }
   })
 }
 

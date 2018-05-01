@@ -61,12 +61,21 @@ const defaultParticlesProps = {
 class ResponsiveParticles extends Component {
   constructor () {
     super()
-    this.state = { resize: false }
+    this.state = {
+      resize: false,
+      shouldRender: false
+    }
     this.handleResize = this.handleResize.bind(this)
   }
 
+  componentDidMount () {
+    this.handleResize()
+    window.addEventListener('resize', this.handleResize)
+    setTimeout(() => this.setState({ shouldRender: true }), 200)
+  }
+
   handleResize () {
-    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    const width = this.getWidth()
     const { resize } = this.state
     if (resize && width >= 900) {
       this.setState({
@@ -80,14 +89,15 @@ class ResponsiveParticles extends Component {
     }
   }
 
-  componentDidMount () {
-    this.handleResize()
-    window.addEventListener('resize', this.handleResize)
+  getWidth () {
+    return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   }
 
   render () {
-    const { resize } = this.state
-    if (resize) {
+    const { resize, shouldRender } = this.state
+    if (!shouldRender) {
+      return false
+    } else if (resize) {
       return (
         <div>
           <Particles params={mobileParticles} {...defaultParticlesProps} />

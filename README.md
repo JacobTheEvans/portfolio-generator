@@ -32,7 +32,7 @@ If you have problems please refer to the Issues section.
 ```
 A Record  Host: @ Value: 192.30.252.154
 A Record  Host: @ Value: 192.30.252.153
-CNAME Record -> Host: @ Value: <yourgitusername>.github.io
+CNAME Record: Host: @ Value: <yourgitusername>.github.io
 ```
 
 For more details checkout [GitHubs documentation](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) or see  the Issues section.

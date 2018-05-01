@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ThemeContext } from '../../theme'
+import { ThemeContext } from '../theme'
 
 const SeparatorSection = styled.div`
   max-width: 750px;

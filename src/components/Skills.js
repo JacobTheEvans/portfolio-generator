@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { toCapitalize } from '../../utils'
+import { toCapitalize } from '../utils'
 
 const SkillsSection = styled.div`
   max-width: 750px;

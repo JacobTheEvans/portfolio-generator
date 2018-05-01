@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
-import mobileParticles from './mobile-particles'
-import { ThemeContext } from '../../theme'
+import { mobileParticles } from '../utils'
+import { ThemeContext } from '../theme'
 
 const HeaderSection = styled.div`
   width: 100%;

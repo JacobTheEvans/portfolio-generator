@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from 'react-fontawesome'
 import styled from 'styled-components'
-import { ThemeContext } from '../../theme'
+import { ThemeContext } from '../theme'
 
 const FooterSection = styled.div`
   max-width: 750px;

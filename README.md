@@ -15,6 +15,11 @@ Generate your portfolio using my custom theme and upload it to github pages.
 
 If you have problems please refer to the Issues section.
 
+## How to update
+1. Update your config.js file
+2. Run `npm run build`
+3. Run `npm run deploy`
+
 ## Custom Domain
 1. Open the `CNAME` file in the `public` folder.
 2. Add your custom domain to its contents (Example: example.com)
@@ -30,7 +35,7 @@ A Record  Host: @ Value: 192.30.252.153
 CNAME Record -> Host: @ Value: <yourgitusername>.github.io
 ```
 
-For more details checkout [GitHubs documentation](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) or see  the issues section.
+For more details checkout [GitHubs documentation](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/) or see  the Issues section.
 
 ## Issues
 If you have any issues with the portfolio website open a issue [here](https://github.com/JacobTheEvans/portfolio-generator/issues). Please include the contents of your `src/config.js` file.

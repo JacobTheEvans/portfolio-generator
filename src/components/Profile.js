@@ -33,6 +33,7 @@ const Description = styled.div`
   margin: 0;
   @media screen and (max-width: 650px) {
     width: 100%;
+    text-align: left;
   }
 `
 

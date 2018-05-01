@@ -22,6 +22,9 @@ const Text = styled.p`
   text-align: justify;
   line-height: 30px;
   font-size: 18px;
+  @media screen and (max-width: 650px) {
+    text-align: left;
+  }
 `
 
 const Title = styled.span`

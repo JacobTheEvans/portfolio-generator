@@ -17,7 +17,6 @@ function main () {
     else {
       console.log('Config generated')
       console.log('Update your package.json "homepage" to match http://<gitname>.github.io/portfolio-generator')
-      console.log('Also update the favicon.ico and CNAME file in public folder')
       console.log('Run "npm run build" to make your website')
       console.log('Then run "npm run deploy" to push to github')
       console.log('For more details checkout the README.md')

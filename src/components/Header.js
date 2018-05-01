@@ -29,11 +29,17 @@ const Content = styled.div`
 const MainHeader = styled.h1`
   font-size: 65px;
   margin: 0;
+  @media screen and (max-width: 650px) {
+    font-size: 50px;
+  }
 `
 
 const SubHeader = styled.h2`
   font-size: 33px;
   margin: 5px 0 0 0;
+  @media screen and (max-width: 650px) {
+    font-size: 25px;
+  }
 `
 
 function Header ({ brand, slogan }) {
@@ -77,12 +83,12 @@ class ResponsiveParticles extends Component {
   handleResize () {
     const width = this.getWidth()
     const { resize } = this.state
-    if (resize && width >= 900) {
+    if (resize && width >= 850) {
       this.setState({
         resize: false
       })
     }
-    if (!resize && width < 900) {
+    if (!resize && width < 850) {
       this.setState({
         resize: true
       })

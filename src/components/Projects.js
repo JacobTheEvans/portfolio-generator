@@ -12,8 +12,11 @@ const Card = styled.div`
   width: 100%;
   background-color: #EEE;
   padding: 20px 30px;
-  height: 125px;
+  height: 135px;
   margin: 30px auto;
+  @media screen and (max-width: 650px) {
+    height: 175px;
+  }
 `
 
 const Link = styled.a`

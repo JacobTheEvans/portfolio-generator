@@ -7,6 +7,10 @@ const ProfileSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
 `
 
 const Image = styled.div`
@@ -15,6 +19,9 @@ const Image = styled.div`
   padding: 10px;
   background-position: top;
   background-size: cover;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 `
 
 const Description = styled.div`
@@ -24,6 +31,9 @@ const Description = styled.div`
   line-height: 30px;
   text-align: justify;
   margin: 0;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
 `
 
 function Profile ({ img, description }) {

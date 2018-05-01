@@ -8,7 +8,7 @@ export function toCapitalize (str) {
 export const mobileParticles = {
   particles: {
     number: {
-      value: 2,
+      value: 10,
       density: {
         enable: false,
         value_area: 1200

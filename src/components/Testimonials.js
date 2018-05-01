@@ -32,14 +32,12 @@ function Testimonials ({ testimonials }) {
   return (
     <TestimonialsSection>
       <Slider {...settings}>
-        {
-          testimonials.map(({ text, author, authorTitle }) => (
-            <div key={text + author}>
-              <Text>{text}</Text>
-              <p>- <span className='author'>{author}</span> <Title>{authorTitle}</Title></p>
-            </div>
-          ))
-        }
+        {testimonials.map(({ text, author, authorTitle }) => (
+          <div key={text + author}>
+            <Text>{text}</Text>
+            <p>- <span className='author'>{author}</span> <Title>{authorTitle}</Title></p>
+          </div>
+        ))}
       </Slider>
     </TestimonialsSection>
   )

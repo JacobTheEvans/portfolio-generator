@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import Content from './components/Content'
 import Menu from './components/Menu'
 import Header from './components/Header'
 import Profile from './components/Profile'
@@ -70,31 +71,33 @@ function Template ({ data }) {
   return (
     <ThemeProvider>
       {data.header && <Header brand={data.header.brand} slogan={data.header.slogan} />}
-      {data.about && (
-        <Fragment>
-          <Separator heading={headerOverrides.about || 'About Me'} />
-          <Profile img={data.about.img} description={data.about.description} />
-        </Fragment>
-      )}
-      {data.skills && (
-        <Fragment>
-          <Separator heading={headerOverrides.skills || 'Skills'} />
-          <Skills skills={data.skills} />
-        </Fragment>
-      )}
-      {data.projects && (
-        <Fragment>
-          <Separator heading={headerOverrides.projects || 'Projects'} />
-          <Projects projects={data.projects} />
-        </Fragment>
-      )}
-      {data.testimonials && (
-        <Fragment>
-          <Separator heading={headerOverrides.testimonials || 'Testimonials'} />
-          <Testimonials testimonials={data.testimonials} />
-        </Fragment>
-      )}
-      {data.footer && <Footer social={data.footer.social} year={data.footer.year} />}
+      <Content>
+        {data.about && (
+          <Fragment>
+            <Separator heading={headerOverrides.about || 'About Me'} />
+            <Profile img={data.about.img} description={data.about.description} />
+          </Fragment>
+        )}
+        {data.skills && (
+          <Fragment>
+            <Separator heading={headerOverrides.skills || 'Skills'} />
+            <Skills skills={data.skills} />
+          </Fragment>
+        )}
+        {data.projects && (
+          <Fragment>
+            <Separator heading={headerOverrides.projects || 'Projects'} />
+            <Projects projects={data.projects} />
+          </Fragment>
+        )}
+        {data.testimonials && (
+          <Fragment>
+            <Separator heading={headerOverrides.testimonials || 'Testimonials'} />
+            <Testimonials testimonials={data.testimonials} />
+          </Fragment>
+        )}
+        {data.footer && <Footer social={data.footer.social} year={data.footer.year} />}
+      </Content>
     </ThemeProvider>
   )
 }

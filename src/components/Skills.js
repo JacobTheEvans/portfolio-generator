@@ -16,6 +16,9 @@ const SectionDiv = styled.div`
   &:last-child  {
     margin-right: auto;
   }
+  @media screen and (max-width: 650px) {
+    flex-basis: 50%;
+  }
 `
 
 const Header = styled.h3`
@@ -39,13 +42,11 @@ function Section ({ header, items }) {
   return (
     <SectionDiv>
       <Header>{toCapitalize(header)}</Header>
-      {
-        items.map((item, i) => (
-          <Skill key={item + i}>
-            {item}
-          </Skill>
-        ))
-      }
+      {items.map((item, i) => (
+        <Skill key={item + i}>
+          {item}
+        </Skill>
+      ))}
     </SectionDiv>
   )
 }

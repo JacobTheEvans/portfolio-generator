@@ -1,9 +1,6 @@
-// mainColor: '#3399ff',
-// secondaryColor: '#a0cfff',
-
 export const theme = {
-  main: 'purple',
-  secondary: 'red'
+  main: '#3399ff',
+  secondary: '#a0cfff'
 }
 
 export const templates = [
@@ -16,6 +13,13 @@ export const templates = [
     about: {
       img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
       description: `I am Jacob Evans. I have a passion for programming and an overwhelming zeal when it comes to learning. I am an avid Linux user, a supporter of open source software, and an advocate of using technology to improve the world. I currently work at Cybus GmbH as a NodeJS IoT Developer.`
+    },
+    skills: {
+      languages: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP'],
+      frontend: ['React', 'Redux', 'Apollo', 'Angular', 'WordPress'],
+      backend: ['Express', 'Restify', 'GraphQL', 'Mongoose', 'Mocha/Chai'],
+      databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
+      tools: ['Docker', 'Docker-compose', 'Proto.io']
     },
     projects: [
       {
@@ -34,13 +38,6 @@ export const templates = [
         url: 'https://github.com/JacobTheEvans/twitter-crawler'
       }
     ],
-    skills: {
-      languages: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP'],
-      frontend: ['React', 'Redux', 'Apollo', 'Angular', 'WordPress'],
-      backend: ['Express', 'Restify', 'GraphQL', 'Mongoose', 'Mocha/Chai'],
-      databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
-      tools: ['Docker', 'Docker-compose', 'Proto.io']
-    },
     testimonials: [
       {
         author: 'Jacob Quinn Sanders',
@@ -96,6 +93,13 @@ export const templates = [
       img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
       description: `Ich heiß Jacob Evans. Ich liebe es zu programmieren und lernen gern. Ich bin ein begeisterter Linux-Benutzer, und a unterstütze Open-Source-Software, und Verfechter der Verwendung von Technologie zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS IoT Entwickler.`
     },
+    skills: {
+      sprachen: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP'],
+      frontend: ['React', 'Redux', 'Apollo', 'Angular', 'WordPress'],
+      backend: ['Express', 'Restify', 'GraphQL', 'Mongoose', 'Mocha/Chai'],
+      databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
+      werkzeuge: ['Docker', 'Docker-compose', 'Proto.io']
+    },
     projects: [
       {
         name: 'swagger-validator-middleware',
@@ -113,13 +117,6 @@ export const templates = [
         url: 'https://github.com/JacobTheEvans/twitter-crawler'
       }
     ],
-    skills: {
-      sprachen: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP'],
-      frontend: ['React', 'Redux', 'Apollo', 'Angular', 'WordPress'],
-      backend: ['Express', 'Restify', 'GraphQL', 'Mongoose', 'Mocha/Chai'],
-      databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
-      werkzeuge: ['Docker', 'Docker-compose', 'Proto.io']
-    },
     testimonials: [
       {
         author: 'Jacob Quinn Sanders',

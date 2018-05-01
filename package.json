@@ -20,5 +20,5 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "jacobtheevans.com"
+  "homepage": "http://jacobtheevans.com"
 }

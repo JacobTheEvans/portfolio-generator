@@ -11,9 +11,11 @@ function main () {
     const addAnother = getBoolean('Would you like to add another template?')
     if (!addAnother) break
   }
-  console.log(result(theme))
-  console.log(result(templates))
-
+  const config = `${result('theme', theme)}\n\n${result('templates', templates)}`
+  writeFile('./src/config.js', config, err => {
+    if (err) console.log(err)
+    else console.log('Config generated\nRun "npm publish" to push to github')
+  })
 }
 
 function genTheme () {
@@ -156,8 +158,8 @@ function genFooter () {
   }
 }
 
-function result (theme) {
-  return `export const result = ${convert(theme)}`
+function result (varName, data) {
+  return `export const ${varName} = ${convert(data)}`
 }
 
 function convert (obj) {

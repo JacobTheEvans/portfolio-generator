@@ -23,6 +23,11 @@ export const templates = [
     },
     projects: [
       {
+        name: 'gorilla-auth',
+        description: 'General purpose authentication service with a GraphQL interface and plugin interface.',
+        url: 'https://github.com/HamburgChimps/gorilla-auth'
+      },
+      {
         name: 'swagger-validator-middleware',
         description: 'Restify middleware for validating Swagger 2.0 specifications against incoming requests.',
         url: 'https://github.com/JacobTheEvans/swagger-validator-middleware'
@@ -85,13 +90,13 @@ export const templates = [
     },
     headerOverrides: {
       about: 'Über mich',
-      skills: 'Fertigkeit',
+      skills: 'Fertigkeiten',
       projects: 'Projekte',
       testimonials: 'Referenzen'
     },
     about: {
       img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
-      description: `Ich heiß Jacob Evans. Ich liebe es zu programmieren und lernen gern. Ich bin ein begeisterter Linux-Benutzer, und a unterstütze Open-Source-Software, und Verfechter der Verwendung von Technologie zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS IoT Entwickler.`
+      description: `Ich heiß Jacob Evans. Ich liebe zu programmieren und lerne gern. Ich bin ein begeisterter Linux-Anwender, unterstütze Open-Source-Software und bin ein Verfechter der Verwendung von Technologien zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS IoT Entwickler.`
     },
     skills: {
       sprachen: ['HTML', 'CSS', 'JavaScript', 'Python', 'PHP'],
@@ -102,18 +107,23 @@ export const templates = [
     },
     projects: [
       {
+        name: 'gorilla-auth',
+        description: 'General purpose authentication service with a GraphQL interface and plugin interface.',
+        url: 'https://github.com/HamburgChimps/gorilla-auth'
+      },
+      {
         name: 'swagger-validator-middleware',
-        description: 'Stellen Sie die Middleware wieder her, um die Swagger 2.0-Spezifikationen für eingehende Anforderungen zu überprüfen.',
+        description: 'Restify middleware for validating Swagger 2.0 specifications against incoming requests.',
         url: 'https://github.com/JacobTheEvans/swagger-validator-middleware'
       },
       {
         name: 'react-adinkra',
-        description: 'Westafrikanische Adinkra-Symbole wurden zu einem Web-Font gemacht, der in eine React-Komponente eingewickelt wurde.',
+        description: 'West African Adinkra symbols made into a web font wrapped in a react component.',
         url: 'https://github.com/JacobTheEvans/react-adinkra'
       },
       {
         name: 'twitter-crawler',
-        description: 'Python-Crawler, der ein Netzwerkdiagramm von Twitter-Benutzer-Followern erstellt.',
+        description: 'Python crawler bot that maps over a twitter user and makes a network graph of their followers and their followers followers.',
         url: 'https://github.com/JacobTheEvans/twitter-crawler'
       }
     ],

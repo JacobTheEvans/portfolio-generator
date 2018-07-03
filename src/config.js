@@ -11,7 +11,7 @@ export const templates = [
       slogan: 'Nerdy Developer'
     },
     about: {
-      img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
+      img: 'https://avatars0.githubusercontent.com/u/8763146?s=400&u=a516801fb3a69c366967711ea5c6a1ef57b2b342&v=4',
       description: `I am Jacob Evans. I have a passion for programming and an overwhelming zeal when it comes to learning. I am an avid Linux user, a supporter of open source software, and an advocate of using technology to improve the world. I currently work at Cybus GmbH as a NodeJS IoT Developer.`
     },
     skills: {
@@ -95,7 +95,7 @@ export const templates = [
       testimonials: 'Referenzen'
     },
     about: {
-      img: 'https://scontent-frt3-2.xx.fbcdn.net/v/t1.0-9/20246187_10207080425568691_3859849211000359817_n.jpg?_nc_cat=0&oh=5516a8f92fb9379b56c3d191ab3e2365&oe=5B37D4F6',
+      img: 'https://avatars0.githubusercontent.com/u/8763146?s=400&u=a516801fb3a69c366967711ea5c6a1ef57b2b342&v=4',
       description: `Ich heiß Jacob Evans. Ich liebe zu programmieren und lerne gern. Ich bin ein begeisterter Linux-Anwender, unterstütze Open-Source-Software und bin ein Verfechter der Verwendung von Technologien zur Verbesserung der Welt. Ich arbeite zur Zeit bei der Cybus GmbH als NodeJS IoT Entwickler.`
     },
     skills: {
